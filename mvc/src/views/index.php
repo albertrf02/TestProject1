@@ -45,13 +45,13 @@
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="\img\149345795_8938c9a072_b.jpg" class="d-block w-100" alt="">
+            <img src="\img\36729910553_30e2f74d6f_k.jpg" class="d-block w-100" alt="">
           </div>
           <div class="carousel-item">
-            <img src="\img\4950418775_9513d04531_o.jpg" class="d-block w-100" alt="...">
+            <img src="\img\49639837947_bb98d51e39_k.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="\img\5056408986_db824ab23f_k.jpg  " class="d-block w-100" alt="...">
+            <img src="\img\341237419038_4723e12a_m.jpg  " class="d-block w-100" alt="...">
           </div>
 
         </div>

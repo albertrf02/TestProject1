@@ -14,9 +14,13 @@
     <div class="container-fluid">
       <a class="navbar-brand">LOGO</a>
       <form class="d-flex" role="search">
-        <a class="btn btn btn-link nav-link" href="index.php?r=registre">registre</a>
-        <br>
-        <a class="btn btn btn-link nav-link" href="index.php?r=dades">dades</a>
+        <div>
+          <a class="btn btn btn-link nav-link" href="index.php?r=registre">registre </a>
+        </div>
+        |
+        <div>
+          <a class="btn btn btn-link nav-link" href="index.php?r=dades"> dades</a>
+        </div>
       </form>
     </div>
   </nav>
