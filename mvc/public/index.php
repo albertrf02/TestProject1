@@ -17,20 +17,11 @@ require "fpdf/fpdf.php";
 // include "../src/controllers/exemple.php";
 // include "../src/controllers/registre.php";
 include "../src/controllers/index.php";
-include "../src/controllers/login.php";
 include "../src/controllers/registre.php";
-include "../src/controllers/registreAdmin.php";
-include "../src/controllers/registreGestor.php";
-include "../src/controllers/Apartament.php";
-include "../src/controllers/logout.php";
-include "../src/controllers/userpage.php";
-include "../src/controllers/adminPanelCtrl.php";
-include "../src/controllers/uploadApartament.php";
-include "../src/controllers/reservaCtrl.php";
-include "../src/controllers/apartament_ajax.php";
-include "../src/controllers/temporadaCtrl.php";
-include "../src/controllers/buscarReservaCtrl.php";
-include "../src/controllers/apartamentPage.php";
+include "../src/controllers/dades.php";
+include "../src/controllers/validarDades.php";
+include "../src/controllers/inscriptionCtrl.php";
+
 include "../src/middleware/middleAdmin.php";
 
 
@@ -48,17 +39,11 @@ if (isset($_REQUEST["r"])) {
 }
 
 
-if ($r == "login") {
-    ctrlLogin($request, $response, $container);
-
-} elseif ($r == "registre") {
+if ($r == "registre") {
     ctrlRegistre($request, $response, $container);
-} elseif ($r == "apartament") {
-    isLogged($request, $response, $container, "ctrlApartament");
-} elseif ($r == "logout") {
-    ctrlLogout($request, $response, $container);
-}
-else {
+} elseif ($r == "dades") {
+    getUserData($request, $response, $container, "ctrlDades");
+} else {
     getUserData($request, $response, $container, "ctrlIndex");
 }
 
