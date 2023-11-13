@@ -16,13 +16,10 @@ function ctrlRegistre($request, $response, $container)
         $numero = $_POST['number'];
         $ciutat = $_POST['city'];
         $codiPostal = $_POST['postalcode'];
-        $resguardPath = "resguard/" . basename($_FILES["paymentReceipt"]["name"]);
+        $resguardPath = "resguard/" . $_FILES["paymentReceipt"]["name"];
 
-        // Upload the resguard file to the specified folder
-        $target_dir = "resguard/";
-        $target_file = $target_dir . basename($_FILES["paymentReceipt"]["name"]);
-
-        move_uploaded_file($_FILES["paymentReceipt"]["tmp_name"], $target_file);
+        // Upload the resguard file to the specified folde
+        move_uploaded_file($_FILES["paymentReceipt"]["tmp_name"], $resguardPath);
 
         // Proceed with registration
         $result = $RegisterModel->insertInscripcion($nom, $cognoms, $dataNaixement, $carrer, $numero, $ciutat, $codiPostal, $resguardPath);

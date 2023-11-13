@@ -2,7 +2,7 @@
 function ctrlLogout($request, $response, $container)
 {
     $response->setTemplate("index.php");
-    session_destroy();
+    unset($_SESSION['identified']);
     return $response;
 }
 

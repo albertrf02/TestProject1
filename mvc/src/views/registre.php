@@ -26,7 +26,7 @@
                 <div class="col-4">
                     <h2 class="text-center">Registre</h2>
                     <hr>
-                    <form method="POST" action="index.php?r=registre.php" enctype="multipart/form-data">
+                    <form method="POST" action="index.php?r=registre" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Nom</label>
                             <input type="text" class="form-control" id="name" name="name">
