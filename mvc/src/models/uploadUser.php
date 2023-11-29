@@ -43,8 +43,12 @@ class UploadUser
                     $resguardStmt = $this->pdo->prepare($resguardsql);
                     $resguardStmt->bindParam(':path', $_FILES['resguard']['name']);
                     $resguardStmt->bindParam(':idInscripcions', $this->pdo->lastInsertId()); // Get the ID of the last inserted apartment
-                    $resguardStmt->execute();
-                    return true;
+                    if ($resguardStmt->execute()) {
+                        // Redirect to display_info.php with the user ID
+                        $userId = $this->pdo->lastInsertId();
+                        header("Location: /infoPage.php?id=" . $userId);
+                        exit;
+                    }
                 }
                 // ...
             } else {

@@ -15,7 +15,7 @@ class Users
     public function getAll()
     {
         $tasks = array();
-        $query = "select id, user, pass from users;";
+        $query = "select Nom, Cognom, Ciutat from Inscripcions;";
         foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $task) {
             $tasks[] = $task;
         }
@@ -43,7 +43,7 @@ class Users
 
     public function getById($id)
     {
-        $stm = $this->sql->prepare('select * from usuari where id=:id;');
+        $stm = $this->sql->prepare('select * from Inscripcions where id=:id;');
         $stm->execute([':id' => $id]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
         if (is_array($result)) {

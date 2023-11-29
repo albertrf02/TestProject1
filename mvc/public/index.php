@@ -20,6 +20,8 @@ include "../src/controllers/index.php";
 include "../src/controllers/registre.php";
 include "../src/controllers/dades.php";
 include "../src/controllers/validarDades.php";
+include "../src/controllers/infoPage.php";
+
 
 include "../src/middleware/middleAdmin.php";
 
