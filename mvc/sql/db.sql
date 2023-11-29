@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS testProject1;
+CREATE DATABASE testProject1;
+
+use testProject1;
+
 CREATE TABLE Inscripcions (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nom VARCHAR(50) NOT NULL,
@@ -7,5 +12,11 @@ CREATE TABLE Inscripcions (
     Numero VARCHAR(10) NOT NULL,
     Ciutat VARCHAR(50) NOT NULL,
     CodiPostal VARCHAR(10) NOT NULL,
-    ResguardPath VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Resguard (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    path VARCHAR(255),
+    IdInscripcions INT,
+    FOREIGN KEY (IdInscripcions) REFERENCES Inscripcions(Id)
 );

@@ -12,6 +12,44 @@
         integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <title>Kalewi</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .form-container {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .button1 {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button1:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,8 +94,8 @@
                             <input type="text" class="form-control" id="postalcode" name="postalcode">
                         </div>
                         <div class="form-group">
-                            <label for="paymentReceipt">Resguard del pagament</label>
-                            <input type="file" class="form-control-file" id="paymentReceipt" name="paymentReceipt">
+                            <label for="resguard">Resguard del pagament</label>
+                            <input type="file" class="form-control-file" id="resguard" name="resguard">
                         </div>
                         <div class="text-center">
                             <button type="submit" class="button1">Submit</button>
